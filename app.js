@@ -12,7 +12,13 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Register the location for handlebars partials here:
+app.get('/beers', (req, res, next) => {
+  res.render('beers')
+})
+
+app.get('/random-beers', (req, res, next) => {
+  res.render('random')
+})
 
 // ...
 
