@@ -1,13 +1,5 @@
 <div class="beers">
     {{#each data}}
-    <div class='cartBeer'>
-
-        <img src='{{this.image_url}}' />
-        <h2>{{this.name}}</h2>
-        <p>{{this.description}}</p>
-        <span>#{{this.tagline}}</span>
-
-
-    </div>
+    {{>cardBeer}}
     {{/each}}
 </div>
