@@ -33,7 +33,7 @@ button a {
 .cartBeer {
   display: flex;
   flex-direction: column;
-  width: 15vw;
+  width: 200px;
   font-size: 0.7em;
   align-items: center;
   margin: 20px auto;
