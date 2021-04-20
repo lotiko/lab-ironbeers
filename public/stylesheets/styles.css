@@ -1,8 +1,19 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+}
+main {
+  min-height: 84vh;
+  max-width: 100%;
 }
 img {
   width: 300px;
@@ -14,7 +25,7 @@ img {
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  height: 70vh;
+  height: 84vh;
 }
 #home-views img {
   padding-left: 40px;
@@ -23,7 +34,7 @@ button {
   height: 3em;
   width: 15em;
   font-weight: bold;
-  background-color: royalblue;
+  background-color: #2081c3;
   border-radius: 10px;
 }
 button a {
@@ -37,16 +48,29 @@ button a {
   font-size: 0.7em;
   align-items: center;
   margin: 20px auto;
-  border: 2px solid royalblue;
+  border: 2px solid #2081c3;
   border-radius: 10px;
   padding-bottom: 5px;
+}
+#random-item {
+  display: flex;
+  height: 84vh;
+}
+#random-item .cartBeer {
+  width: 40%;
+  align-self: center;
 }
 .cartBeer p,
 .cartBeer h2 {
   margin: 5px 10% 5px 10%;
 }
+.cartBeer p {
+  max-height: 200px;
+  overflow-y: scroll;
+}
 .cartBeer img {
   height: 150px;
+  max-width: 150px;
   object-fit: contain;
   margin-top: 5px;
   align-self: center;
@@ -55,12 +79,12 @@ button a {
 .beers {
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  max-width: 100%;
 }
 
 nav {
   display: flex;
-  background-color: royalblue;
+  background-color: #2081c3;
   height: 8vh;
   align-items: center;
 }
@@ -71,6 +95,17 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+footer {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #0a2c42;
+  height: 8vh;
+  padding-left: 4vw;
+  position: sticky;
+  bottom: 0;
+}
+
 /*
 white: #f7f9f9;
 light-blue: #2081c3;
