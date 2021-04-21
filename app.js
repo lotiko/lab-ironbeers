@@ -19,7 +19,19 @@ app.get("/beers", (req, res, next) => {
   punkAPI
     .getBeers()
     .then((beersData) => {
+      console.log(beersData[10], "here");
       res.render("beers", { title: "beers", data: beersData });
+    })
+    .catch((err) => {
+      res.render("errors", { title: "Oops", data: err });
+    });
+});
+app.get("/beers/:id", (req, res, next) => {
+  punkAPI
+    .getBeer(req.params.id)
+    .then((beerData) => {
+      console.log(beerData);
+      res.render("random", { title: "beer details", beer: { ...beerData[0], random: true } });
     })
     .catch((err) => {
       res.render("errors", { title: "Oops", data: err });

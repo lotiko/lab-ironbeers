@@ -1,6 +1,6 @@
 <div class='cartBeer'>
         <img src='{{this.image_url}}' />
-        <h2>{{this.name}}</h2>
+        <h2><a href="/beers/{{this.id}}">{{this.name}}</a></h2>
         <p>{{this.description}}</p>
         <span>#{{this.tagline}}</span>
         {{#if this.random}}
@@ -10,5 +10,6 @@
             {{/each}}
         </ul>
         <p>{{this.brewers_tips}}</p>
+
         {{/if}}
 </div>
